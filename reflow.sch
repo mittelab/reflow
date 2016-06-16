@@ -1,0 +1,336 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Reflow"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TRIAC U?
+U 1 1 5762B00E
+P 2950 2950
+F 0 "U?" H 2700 3300 50  0000 C CNN
+F 1 "2N6075AG" H 2650 2700 50  0000 C CNN
+F 2 "" H 2950 2950 50  0000 C CNN
+F 3 "" H 2950 2950 50  0000 C CNN
+	1    2950 2950
+	1    0    0    -1  
+$EndComp
+Text Notes 700  1000 0    360  ~ 72
+#mittelab reflow
+$Comp
+L CONN_01X08 P?
+U 1 1 5762B1CE
+P 3850 6500
+F 0 "P?" H 3850 6950 50  0000 C CNN
+F 1 "CONN_01X08" V 3950 6500 50  0000 C CNN
+F 2 "" H 3850 6500 50  0000 C CNN
+F 3 "" H 3850 6500 50  0000 C CNN
+	1    3850 6500
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5762B2D9
+P 1800 3400
+F 0 "R?" V 1880 3400 50  0000 C CNN
+F 1 "820" V 1800 3400 50  0000 C CNN
+F 2 "" V 1730 3400 50  0000 C CNN
+F 3 "" H 1800 3400 50  0000 C CNN
+	1    1800 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X04 P?
+U 1 1 5762B42C
+P 3700 1550
+F 0 "P?" H 3700 1800 50  0000 C CNN
+F 1 "CONN_01X04" V 3800 1550 50  0000 C CNN
+F 2 "" H 3700 1550 50  0000 C CNN
+F 3 "" H 3700 1550 50  0000 C CNN
+	1    3700 1550
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5900 3850 2    60   Input ~ 0
+FASE_220
+$Comp
+L CONN_01X03 P?
+U 1 1 5762B60B
+P 5800 6500
+F 0 "P?" H 5800 6700 50  0000 C CNN
+F 1 "CONN_01X03" V 5900 6500 50  0000 C CNN
+F 2 "" H 5800 6500 50  0000 C CNN
+F 3 "" H 5800 6500 50  0000 C CNN
+	1    5800 6500
+	0    1    1    0   
+$EndComp
+Text GLabel 6150 6000 2    60   Input ~ 0
+FASE_220
+$Comp
+L VR VR?
+U 1 1 5762B77C
+P 3500 2900
+F 0 "VR?" V 3560 2854 50  0000 C TNN
+F 1 "7N431K" V 3500 2900 50  0000 C CNN
+F 2 "" H 3500 2900 50  0000 C CNN
+F 3 "" H 3500 2900 50  0000 C CNN
+	1    3500 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 6150 5800 2    60   Input ~ 0
+NEUTRO_220
+$Comp
+L FODM3022 U?
+U 1 1 5762BEE8
+P 3600 5150
+F 0 "U?" H 3400 5350 50  0000 L CNN
+F 1 "FODM3022" H 3600 5350 50  0000 L CNN
+F 2 "MFP4L" H 3400 4950 50  0000 L CIN
+F 3 "" H 3575 5150 50  0000 L CNN
+	1    3600 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5762C3DD
+P 3700 5700
+F 0 "R?" V 3780 5700 50  0000 C CNN
+F 1 "220" V 3700 5700 50  0000 C CNN
+F 2 "" V 3630 5700 50  0000 C CNN
+F 3 "" H 3700 5700 50  0000 C CNN
+	1    3700 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4300 3500 4300
+Wire Wire Line
+	3500 4300 3500 4850
+Wire Wire Line
+	2950 1950 2950 2550
+Wire Wire Line
+	2950 1950 3550 1950
+Wire Wire Line
+	3550 1950 3550 1750
+Wire Wire Line
+	3650 1950 5550 1950
+Wire Wire Line
+	3650 1950 3650 1750
+Wire Wire Line
+	2950 3200 2950 3850
+Wire Wire Line
+	5900 6300 5900 6000
+Wire Wire Line
+	5900 6000 6150 6000
+Wire Wire Line
+	3500 2350 3500 2650
+Wire Wire Line
+	1800 2350 3500 2350
+Connection ~ 2950 2350
+Wire Wire Line
+	2950 3450 3500 3450
+Wire Wire Line
+	3500 3450 3500 3150
+Connection ~ 2950 3450
+Wire Wire Line
+	6150 5800 5700 5800
+Wire Wire Line
+	5700 5800 5700 6300
+Wire Wire Line
+	3500 5450 3500 6300
+Wire Wire Line
+	3700 5550 3700 5450
+$Comp
+L FODM3022 U?
+U 1 1 5762C697
+P 4500 5150
+F 0 "U?" H 4300 5350 50  0000 L CNN
+F 1 "FODM3022" H 4500 5350 50  0000 L CNN
+F 2 "MFP4L" H 4300 4950 50  0000 L CIN
+F 3 "" H 4475 5150 50  0000 L CNN
+	1    4500 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5762C69D
+P 4600 5700
+F 0 "R?" V 4680 5700 50  0000 C CNN
+F 1 "220" V 4600 5700 50  0000 C CNN
+F 2 "" V 4530 5700 50  0000 C CNN
+F 3 "" H 4600 5700 50  0000 C CNN
+	1    4600 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 5550 4600 5450
+Wire Wire Line
+	3900 6300 3900 6100
+Wire Wire Line
+	3900 6100 4400 6100
+Wire Wire Line
+	4400 6100 4400 5450
+Wire Wire Line
+	3700 5850 3700 5950
+Wire Wire Line
+	3700 5950 4600 5950
+Wire Wire Line
+	4600 5850 4600 6350
+Connection ~ 4600 5950
+Wire Wire Line
+	3700 4850 3700 3850
+Connection ~ 3700 3850
+$Comp
+L R R?
+U 1 1 5762CD63
+P 2200 3400
+F 0 "R?" V 2280 3400 50  0000 C CNN
+F 1 "330" V 2200 3400 50  0000 C CNN
+F 2 "" V 2130 3400 50  0000 C CNN
+F 3 "" H 2200 3400 50  0000 C CNN
+	1    2200 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3150 2200 3150
+Wire Wire Line
+	2200 3150 2200 3250
+Wire Wire Line
+	2200 3550 2200 3850
+Connection ~ 2950 3850
+Wire Wire Line
+	1800 2350 1800 3250
+Wire Wire Line
+	1800 3550 1800 4300
+$Comp
+L TRIAC U?
+U 1 1 5762D368
+P 5550 2950
+F 0 "U?" H 5300 3300 50  0000 C CNN
+F 1 "2N6075AG" H 5250 2700 50  0000 C CNN
+F 2 "" H 5550 2950 50  0000 C CNN
+F 3 "" H 5550 2950 50  0000 C CNN
+	1    5550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5762D36E
+P 4400 3400
+F 0 "R?" V 4480 3400 50  0000 C CNN
+F 1 "820" V 4400 3400 50  0000 C CNN
+F 2 "" V 4330 3400 50  0000 C CNN
+F 3 "" H 4400 3400 50  0000 C CNN
+	1    4400 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L VR VR?
+U 1 1 5762D374
+P 6100 2900
+F 0 "VR?" V 6160 2854 50  0000 C TNN
+F 1 "7N431K" V 6100 2900 50  0000 C CNN
+F 2 "" H 6100 2900 50  0000 C CNN
+F 3 "" H 6100 2900 50  0000 C CNN
+	1    6100 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 1950 5550 2550
+Wire Wire Line
+	5550 3850 5550 3200
+Wire Wire Line
+	6100 2350 6100 2650
+Wire Wire Line
+	4400 2350 6100 2350
+Connection ~ 5550 2350
+Wire Wire Line
+	5550 3450 6100 3450
+Wire Wire Line
+	6100 3450 6100 3150
+Connection ~ 5550 3450
+$Comp
+L R R?
+U 1 1 5762D382
+P 4800 3400
+F 0 "R?" V 4880 3400 50  0000 C CNN
+F 1 "330" V 4800 3400 50  0000 C CNN
+F 2 "" V 4730 3400 50  0000 C CNN
+F 3 "" H 4800 3400 50  0000 C CNN
+	1    4800 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3150 4800 3150
+Wire Wire Line
+	4800 3150 4800 3250
+Wire Wire Line
+	4800 3850 4800 3550
+Wire Wire Line
+	4400 2350 4400 3250
+Wire Wire Line
+	4400 3550 4400 4850
+Wire Wire Line
+	2200 3850 5900 3850
+Connection ~ 4800 3850
+Connection ~ 5550 3850
+Wire Wire Line
+	4600 4850 4600 3850
+Connection ~ 4600 3850
+$Comp
+L GND #PWR?
+U 1 1 5762D7AE
+P 4600 6350
+F 0 "#PWR?" H 4600 6100 50  0001 C CNN
+F 1 "GND" H 4600 6200 50  0000 C CNN
+F 2 "" H 4600 6350 50  0000 C CNN
+F 3 "" H 4600 6350 50  0000 C CNN
+	1    4600 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 6300 4200 6200
+Wire Wire Line
+	4200 6200 4600 6200
+Text Label 8600 1100 0    60   ~ 0
+TODO:
+Connection ~ 4600 6200
+Text Notes 7100 1950 0    60   ~ 0
+TODO\n* PARTE SINCRONISMO\n* EVENTUALE ALIMENTAZIONE 220->24 o 12V, \n   ma non prioritario per test
+$EndSCHEMATC
