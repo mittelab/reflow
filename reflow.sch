@@ -143,7 +143,9 @@ Wire Wire Line
 Wire Wire Line
 	3500 4300 3500 4850
 Wire Wire Line
-	2950 1950 2950 2550
+	2950 1950 2950 2350
+Wire Wire Line
+	2950 2350 2950 2550
 Wire Wire Line
 	2950 1950 3550 1950
 Wire Wire Line
@@ -153,7 +155,9 @@ Wire Wire Line
 Wire Wire Line
 	3650 1950 3650 1750
 Wire Wire Line
-	2950 3200 2950 3850
+	2950 3200 2950 3450
+Wire Wire Line
+	2950 3450 2950 3850
 Wire Wire Line
 	5900 6300 5900 6000
 Wire Wire Line
@@ -161,7 +165,9 @@ Wire Wire Line
 Wire Wire Line
 	3500 2350 3500 2650
 Wire Wire Line
-	1800 2350 3500 2350
+	1800 2350 2950 2350
+Wire Wire Line
+	2950 2350 3500 2350
 Connection ~ 2950 2350
 Wire Wire Line
 	2950 3450 3500 3450
@@ -211,10 +217,14 @@ Wire Wire Line
 Wire Wire Line
 	3700 5950 4600 5950
 Wire Wire Line
-	4600 5850 4600 6350
+	4600 5850 4600 5950
+Wire Wire Line
+	4600 5950 4600 6200
+Wire Wire Line
+	4600 6200 4600 6350
 Connection ~ 4600 5950
 Wire Wire Line
-	3700 4850 3700 3850
+	3700 3850 3700 4850
 Connection ~ 3700 3850
 $Comp
 L R R?
@@ -272,13 +282,19 @@ F 3 "" H 6100 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5550 1950 5550 2550
+	5550 1950 5550 2350
 Wire Wire Line
-	5550 3850 5550 3200
+	5550 2350 5550 2550
+Wire Wire Line
+	5550 3850 5550 3450
+Wire Wire Line
+	5550 3450 5550 3200
 Wire Wire Line
 	6100 2350 6100 2650
 Wire Wire Line
-	4400 2350 6100 2350
+	4400 2350 5550 2350
+Wire Wire Line
+	5550 2350 6100 2350
 Connection ~ 5550 2350
 Wire Wire Line
 	5550 3450 6100 3450
@@ -307,7 +323,17 @@ Wire Wire Line
 Wire Wire Line
 	4400 3550 4400 4850
 Wire Wire Line
-	2200 3850 5900 3850
+	2200 3850 2950 3850
+Wire Wire Line
+	2950 3850 3700 3850
+Wire Wire Line
+	3700 3850 4600 3850
+Wire Wire Line
+	4600 3850 4800 3850
+Wire Wire Line
+	4800 3850 5550 3850
+Wire Wire Line
+	5550 3850 5900 3850
 Connection ~ 4800 3850
 Connection ~ 5550 3850
 Wire Wire Line
@@ -328,9 +354,102 @@ Wire Wire Line
 	4200 6300 4200 6200
 Wire Wire Line
 	4200 6200 4600 6200
-Text Label 8600 1100 0    60   ~ 0
-TODO:
 Connection ~ 4600 6200
 Text Notes 7100 1950 0    60   ~ 0
 TODO\n* PARTE SINCRONISMO\n* EVENTUALE ALIMENTAZIONE 220->24 o 12V, \n   ma non prioritario per test
+$Comp
+L LTV-814 U?
+U 1 1 57699B4A
+P 8600 3700
+F 0 "U?" H 8400 3900 50  0000 L CNN
+F 1 "LTV-814" H 8600 3900 50  0000 L CNN
+F 2 "DIP-4" H 8400 3500 50  0000 L CIN
+F 3 "" H 8625 3700 50  0000 L CNN
+	1    8600 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 57699D49
+P 8950 3200
+F 0 "R?" V 9030 3200 50  0000 C CNN
+F 1 "2k" V 8950 3200 50  0000 C CNN
+F 2 "" V 8880 3200 50  0000 C CNN
+F 3 "" H 8950 3200 50  0000 C CNN
+	1    8950 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 57699E30
+P 8950 3850
+F 0 "#PWR?" H 8950 3600 50  0001 C CNN
+F 1 "GND" H 8950 3700 50  0000 C CNN
+F 2 "" H 8950 3850 60  0000 C CNN
+F 3 "" H 8950 3850 60  0000 C CNN
+	1    8950 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 3850 8950 3800
+Wire Wire Line
+	8950 3800 8900 3800
+Wire Wire Line
+	8950 3600 8950 3350
+Text GLabel 9050 3600 2    60   Input ~ 0
+PEAK_SENSE
+Connection ~ 8950 3600
+$Comp
+L VAA #PWR?
+U 1 1 5769A541
+P 8950 2950
+F 0 "#PWR?" H 8950 2800 50  0001 C CNN
+F 1 "VAA" H 8950 3100 50  0000 C CNN
+F 2 "" H 8950 2950 60  0000 C CNN
+F 3 "" H 8950 2950 60  0000 C CNN
+	1    8950 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 2950 8950 3050
+Wire Wire Line
+	8900 3600 8950 3600
+Wire Wire Line
+	8950 3600 9050 3600
+Text GLabel 7700 3800 0    60   Input ~ 0
+NEUTRO_220
+Text GLabel 7700 3600 0    60   Input ~ 0
+FASE_220
+$Comp
+L R R?
+U 1 1 5769A8A1
+P 8050 3600
+F 0 "R?" V 8130 3600 50  0000 C CNN
+F 1 "43k?" V 8050 3600 50  0000 C CNN
+F 2 "" V 7980 3600 50  0000 C CNN
+F 3 "" H 8050 3600 50  0000 C CNN
+	1    8050 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5769A91E
+P 8050 3800
+F 0 "R?" V 8130 3800 50  0000 C CNN
+F 1 "43k?" V 8050 3800 50  0000 C CNN
+F 2 "" V 7980 3800 50  0000 C CNN
+F 3 "" H 8050 3800 50  0000 C CNN
+	1    8050 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 3800 8300 3800
+Wire Wire Line
+	8200 3600 8300 3600
+Wire Wire Line
+	7900 3600 7700 3600
+Wire Wire Line
+	7700 3800 7900 3800
+Text Notes 7700 3400 0    60   ~ 0
+R da dimensionare in\nbase alla scelta di\nfotoaccoppiatore
 $EndSCHEMATC
