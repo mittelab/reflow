@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:reflow-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -65,17 +66,6 @@ F 2 "" H 3500 3200 50  0000 C CNN
 F 3 "" H 3500 3200 50  0000 C CNN
 	1    3500 3200
 	-1   0    0    1   
-$EndComp
-$Comp
-L R R?
-U 1 1 5762B2D9
-P 6600 5250
-F 0 "R?" V 6680 5250 50  0000 C CNN
-F 1 "820" V 6600 5250 50  0000 C CNN
-F 2 "" V 6530 5250 50  0000 C CNN
-F 3 "" H 6600 5250 50  0000 C CNN
-	1    6600 5250
-	0    1    -1   0   
 $EndComp
 $Comp
 L CONN_01X04 P?
@@ -137,23 +127,23 @@ F 3 "" H 4300 3350 50  0000 C CNN
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	5700 5250 5700 3550
+	5200 3550 5950 3550
 Wire Wire Line
-	5700 3550 5200 3550
+	7450 4100 7650 4100
 Wire Wire Line
-	7450 4100 8050 4100
+	7650 4100 8050 4100
 Wire Wire Line
 	8050 4100 8050 3500
 Wire Wire Line
 	8050 3500 10150 3500
 Wire Wire Line
-	6150 4100 6800 4100
+	6150 4100 6550 4100
+Wire Wire Line
+	6550 4100 6800 4100
 Wire Wire Line
 	9650 5900 10150 5900
 Wire Wire Line
 	7650 3550 7350 3550
-Wire Wire Line
-	7650 3550 7650 5250
 Connection ~ 7650 4100
 Wire Wire Line
 	6550 4100 6550 3550
@@ -201,7 +191,11 @@ Wire Wire Line
 Wire Wire Line
 	4050 3350 4050 2450
 Wire Wire Line
-	3650 2450 4150 2450
+	3650 2450 3800 2450
+Wire Wire Line
+	3800 2450 4050 2450
+Wire Wire Line
+	4050 2450 4150 2450
 Connection ~ 4050 2450
 Wire Wire Line
 	6150 3350 5200 3350
@@ -222,12 +216,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 4850 6750 4850
 Wire Wire Line
-	6150 4850 6450 4850
-Connection ~ 6150 4100
-Wire Wire Line
-	7650 5250 6750 5250
-Wire Wire Line
-	6450 5250 5700 5250
+	5950 4850 6450 4850
 $Comp
 L TRIAC U?
 U 1 1 5762D368
@@ -237,17 +226,6 @@ F 1 "2N6075AG" H 6750 1250 50  0000 C CNN
 F 2 "" H 7050 1500 50  0000 C CNN
 F 3 "" H 7050 1500 50  0000 C CNN
 	1    7050 1500
-	0    1    -1   0   
-$EndComp
-$Comp
-L R R?
-U 1 1 5762D36E
-P 6600 2650
-F 0 "R?" V 6680 2650 50  0000 C CNN
-F 1 "820" V 6600 2650 50  0000 C CNN
-F 2 "" V 6530 2650 50  0000 C CNN
-F 3 "" H 6600 2650 50  0000 C CNN
-	1    6600 2650
 	0    1    -1   0   
 $EndComp
 $Comp
@@ -262,13 +240,17 @@ F 3 "" H 7100 950 50  0000 C CNN
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	7450 1500 8050 1500
+	7450 1500 7650 1500
 Wire Wire Line
-	6000 1500 6800 1500
+	7650 1500 8050 1500
+Wire Wire Line
+	6000 1500 6150 1500
+Wire Wire Line
+	6150 1500 6550 1500
+Wire Wire Line
+	6550 1500 6800 1500
 Wire Wire Line
 	7650 950  7350 950 
-Wire Wire Line
-	7650 950  7650 2650
 Connection ~ 7650 1500
 Wire Wire Line
 	6550 1500 6550 950 
@@ -278,27 +260,16 @@ Connection ~ 6550 1500
 $Comp
 L R R?
 U 1 1 5762D382
-P 6600 2250
-F 0 "R?" V 6680 2250 50  0000 C CNN
-F 1 "330" V 6600 2250 50  0000 C CNN
-F 2 "" V 6530 2250 50  0000 C CNN
-F 3 "" H 6600 2250 50  0000 C CNN
-	1    6600 2250
-	0    1    -1   0   
+P 6850 2400
+F 0 "R?" V 6930 2400 50  0000 C CNN
+F 1 "330" V 6850 2400 50  0000 C CNN
+F 2 "" V 6780 2400 50  0000 C CNN
+F 3 "" H 6850 2400 50  0000 C CNN
+	1    6850 2400
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	6850 2000 6850 2250
-Wire Wire Line
-	6850 2250 6750 2250
-Wire Wire Line
-	6150 2250 6450 2250
-Wire Wire Line
-	7650 2650 6750 2650
-Wire Wire Line
-	6450 2650 5200 2650
-Wire Wire Line
-	6150 1500 6150 4850
-Connection ~ 6150 2250
 Connection ~ 6150 1500
 Wire Wire Line
 	5200 2450 6150 2450
@@ -377,7 +348,9 @@ $EndComp
 Wire Wire Line
 	4550 5300 4550 5400
 Wire Wire Line
-	4450 5950 4600 5950
+	4450 5950 4550 5950
+Wire Wire Line
+	4550 5950 4600 5950
 Text GLabel 5800 6150 2    60   Input ~ 0
 NEUTRO_220
 Text GLabel 5800 5950 2    60   Input ~ 0
@@ -427,7 +400,9 @@ Wire Wire Line
 Wire Wire Line
 	8050 3300 10150 3300
 Wire Wire Line
-	10050 3200 10150 3200
+	10050 3200 10100 3200
+Wire Wire Line
+	10100 3200 10150 3200
 Wire Wire Line
 	10100 3200 10100 3400
 Wire Wire Line
@@ -435,4 +410,20 @@ Wire Wire Line
 Text GLabel 10050 3200 0    60   Input ~ 0
 NEUTRO_220
 Connection ~ 10100 3200
+Wire Wire Line
+	7650 1500 7650 950 
+Wire Wire Line
+	6850 2550 6850 2650
+Wire Wire Line
+	6850 2650 5200 2650
+Wire Wire Line
+	7650 4100 7650 3550
+Wire Wire Line
+	6150 1500 6150 2450
+Wire Wire Line
+	6150 2450 6150 3350
+Wire Wire Line
+	6150 3350 6150 4100
+Wire Wire Line
+	5950 3550 5950 4850
 $EndSCHEMATC
