@@ -290,8 +290,8 @@ Wire Wire Line
 Wire Wire Line
 	3800 2850 3800 2450
 Connection ~ 3800 2450
-Text Notes 9000 900  0    60   ~ 0
-TODO\n* PARTE SINCRONISMO\n* EVENTUALE ALIMENTAZIONE 220->24 o 12V, \n   ma non prioritario per test
+Text Notes 900  4400 0    60   ~ 0
+TRIAC BASICS\n* TRIAC must be controlled from gate, \n   referred to one of the anodes (AC)\n* TRIAC stays ON as long as the voltage \n   on the gate is there\n* TRIAC would need a special protection \n   circuit called "Scrubber" on the output, \n   RC or Varistor, not mandatory btw\n* a good and simple sample diagram\n   seems could be\n   http://i.stack.imgur.com/3QcQz.png
 $Comp
 L LTV-814 U?
 U 1 1 57699B4A
