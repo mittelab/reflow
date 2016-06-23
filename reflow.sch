@@ -105,17 +105,6 @@ F 3 "" H 7100 3550 50  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L FODM3022 U2
-U 1 1 5762BEE8
-P 4900 3450
-F 0 "U2" H 4700 3650 50  0000 L CNN
-F 1 "FODM3022" H 4900 3650 50  0000 L CNN
-F 2 "MFP4L" H 4700 3250 50  0000 L CIN
-F 3 "" H 4875 3450 50  0000 L CNN
-	1    4900 3450
-	1    0    0    1   
-$EndComp
-$Comp
 L R R2
 U 1 1 5762C3DD
 P 4300 3350
@@ -152,17 +141,6 @@ Wire Wire Line
 	4600 3550 3700 3550
 Wire Wire Line
 	4450 3350 4600 3350
-$Comp
-L FODM3022 U1
-U 1 1 5762C697
-P 4900 2550
-F 0 "U1" H 4700 2750 50  0000 L CNN
-F 1 "FODM3022" H 4900 2750 50  0000 L CNN
-F 2 "MFP4L" H 4700 2350 50  0000 L CIN
-F 3 "" H 4875 2550 50  0000 L CNN
-	1    4900 2550
-	1    0    0    1   
-$EndComp
 $Comp
 L R R1
 U 1 1 5762C69D
@@ -277,7 +255,7 @@ Wire Wire Line
 	3800 2850 3800 2450
 Connection ~ 3800 2450
 Text Notes 900  4400 0    60   ~ 0
-TRIAC BASICS, few words\n\n* TRIAC must be controlled from gate, \n   referred to one of the anodes (AC)\n* TRIAC stays ON as long as the voltage \n   on the gate is there\n* TRIAC would need a special protection \n   circuit called "Scrubber" on the output, \n   RC or Varistor, not mandatory btw\n* a good and simple sample diagram\n   seems could be\n   http://i.stack.imgur.com/3QcQz.png\n* sometime can be found a 330ohm \n   resistor between triac gate and anode:\n   it is to avoid a fluctuating gate, his \n   usage or not should be checked \n   from related triac test schematic.
+TRIAC BASICS, few words\n\n* TRIAC must be controlled from gate, \n   referred to one of the anodes (AC)\n* TRIAC stays ON as long as the voltage \n   on the gate is there\n* TRIAC would need a special protection \n   circuit called "Scrubber" on the output, \n   RC or Varistor, not mandatory btw\n* a good and simple sample diagram\n   seems could be\n   http://i.stack.imgur.com/3QcQz.png\n* sometime can be found a 330ohm \n   resistor between triac gate and anode:\n   it is to avoid a fluctuating gate, his \n   usage or not should be checked \n   from related triac test schematic.\n\n* Calucate Rgate\n  Rgate depends from surge current\n  the optotriac can support,\n  For MOC3041: 1A\n  and from mains peak voltage (Vpp).\n  We need to have a current > minimum\n  gate trigger ON, but less than 1A.\n  So, if we test with a 10Vpp syn,\n  R(min) = 10 / 1A = 10ohm. \n  \n  
 $Comp
 L LTV-814 U3
 U 1 1 57699B4A
@@ -434,4 +412,26 @@ Wire Wire Line
 	9100 950  9300 950 
 Text Notes 8750 1250 0    60   ~ 0
 Alternate scrubber options\nin place of varistor
+$Comp
+L MOC3041M U1
+U 1 1 576C3A5A
+P 4900 2550
+F 0 "U1" H 4700 2750 50  0000 L CNN
+F 1 "MOC3041M" H 4900 2750 50  0000 L CNN
+F 2 "DIP-6" H 4700 2350 50  0000 L CIN
+F 3 "" H 4865 2550 50  0000 L CNN
+	1    4900 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U2
+U 1 1 576C3B95
+P 4900 3450
+F 0 "U2" H 4700 3650 50  0000 L CNN
+F 1 "MOC3041M" H 4900 3650 50  0000 L CNN
+F 2 "DIP-6" H 4700 3250 50  0000 L CIN
+F 3 "" H 4865 3450 50  0000 L CNN
+	1    4900 3450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -1,0 +1,27 @@
+ziongate                                                                23-06-2016
+
+
+
+
+Reflow Tests
+
+
+
+
+1. Triac Tests
+
+                          MOC3041M            TIC106D
+     +5.5V   -- 100ohm -- 1 |  | 6 ----|39|---G
+     GND     -------------2 |  | 4 -----+-----A1  A2 ----LOAD 330hm---- F o N
+                                        |                               20Vpp
+                                        +------------------------------ N o F
+
+Casa mia, setto 
+  - gen sinusoide 20Vpp, 
+  - oscilloscopio con traf isolamento
+  - ps 5.5V per diodo attivazione optotriac
+
+a. misuro con oscilloscopio sul generatore anche invertendo polarita' sonda, 
+sempre segnale sinusoidale.
+b. misuro sempre onda sinusoidale sul carico, anche invertendo F e N, proprio
+come se avessi giocato coi kit GPE.
