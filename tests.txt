@@ -25,3 +25,4 @@ a. misuro con oscilloscopio sul generatore anche invertendo polarita' sonda,
 sempre segnale sinusoidale.
 b. misuro sempre onda sinusoidale sul carico, anche invertendo F e N, proprio
 come se avessi giocato coi kit GPE.
+c. onda sinusoidale riporta semionda negativa un po piu corta in ampiezza
